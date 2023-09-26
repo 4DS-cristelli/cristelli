@@ -28,14 +28,14 @@ public class cerchioTest {
         }catch (Exception e){
             System.out.println(e);
         }
-
-
-
         System.out.println("Rappresentazione del cerchio: "+ c1.toString());
 
         System.out.println("Il centro è: " + c1.getCentro().toString());
 
         System.out.println("Il raggio è: "+ c1.getRaggio());
+
+        System.out.println("Il perimetro è: "+ c1.calcolaPerimetro());
+        System.out.println("l'area  è: "+ c1.calcolaArea());
 
         System.out.println("Inserisci percentuale della nuova dimensione: ");
         perc= input.nextByte();
@@ -55,6 +55,7 @@ public class cerchioTest {
         }catch (Exception e){
             System.out.println(e);
         }
+
 
     }
 }
