@@ -1,12 +1,19 @@
 package cristelliStudente;
 
+import java.util.Locale;
+
 public class Studente {
     private String nome;
     private String cognome;
 
-    public Studente(String n, String c){
-        this.nome = n;
-        this.cognome = c;
+    public Studente(String n, String c)throws Exception{
+        if(controllaStringa(n) && controllaStringa(c)){
+            this.nome = sistemaStringa(n);
+            this.cognome = sistemaStringa(c);
+        }else{
+            throw new Exception("Stringa non inizializzata");
+        }
+
         //controllo stringhe
     }
 
@@ -37,5 +44,22 @@ public class Studente {
                 "nome='" + nome + '\'' +
                 ", cognome='" + cognome + '\'' +
                 '}';
+    }
+
+    private boolean controllaStringa(String stringa)throws Exception{
+        if(stringa.length()<3){
+
+            throw new Exception("Nome o Cognome tropo corti");
+        }
+        return true;
+    }
+
+    private String sistemaStringa(String s){
+        s = s.toLowerCase(Locale.ROOT);
+        s= s.replaceAll(" ","");
+        char tmpC= Character.toUpperCase(s.charAt(0));
+        s = s.substring(1);
+        String def = tmpC+s;
+        return def;
     }
 }
