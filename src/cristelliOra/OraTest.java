@@ -1,4 +1,4 @@
-package ora;
+package cristelliOra;
 import java.util.Scanner;
 public class OraTest {
     public static void main(String[] args){

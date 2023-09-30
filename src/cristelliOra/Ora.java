@@ -1,4 +1,4 @@
-package ora;
+package cristelliOra;
 
 public class Ora {
     //attributo
