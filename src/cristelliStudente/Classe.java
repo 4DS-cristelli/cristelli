@@ -7,8 +7,13 @@ public class Classe {
     private Studente[] studenti;
 
     public Classe(Studente capoClasse, Studente[] studenti)throws Exception{
-        this.capoClasse = new Studente(capoClasse);
-        this.studenti = studenti.clone();
+        if(studenti.length>0){
+            this.capoClasse = new Studente(capoClasse);
+            this.studenti = studenti.clone();
+        }else{
+            throw new Exception("lungezza <= 0");
+        }
+
     }
 
     public Studente getCapoClasse() {
@@ -31,7 +36,11 @@ public class Classe {
         if(studenti.length==0){
             throw new Exception("Non ci sono studenti");
         }
+
         String tmp;
+        tmp = capoClasse.getCognome();
+        capoClasse.setCognome(capoClasse.getNome());
+        capoClasse.setNome(tmp);
         Integer i;
         for(i = 0; i< studenti.length; i++){
             tmp = studenti[i].getCognome();
@@ -44,7 +53,7 @@ public class Classe {
     public String toString() {
         return "Classe{" +
                 "capoClasse=" + capoClasse +
-                ", studenti=" + Arrays.toString(studenti) +
+                ", studente=" + Arrays.toString(studenti) +
                 '}';
     }
 }

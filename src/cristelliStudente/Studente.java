@@ -48,18 +48,17 @@ public class Studente {
 
     private boolean controllaStringa(String stringa)throws Exception{
         if(stringa.length()<3){
-
             throw new Exception("Nome o Cognome tropo corti");
         }
         return true;
     }
 
     private String sistemaStringa(String s){
-        s = s.toLowerCase(Locale.ROOT);
-        s= s.replaceAll(" ","");
-        char tmpC= Character.toUpperCase(s.charAt(0));
-        s = s.substring(1);
-        String def = tmpC+s;
+        s = s.toLowerCase(Locale.ROOT); //rende tutta la stringa minuscola
+        s= s.replaceAll(" ",""); //elima tutti li spazi
+        char tmpC= Character.toUpperCase(s.charAt(0)); //prende la prima lettera e crea un char maiuscolo di quella lettera
+        s = s.substring(1);//tolgo la prima lettera miniscola
+        String def = tmpC+s;//aggiungo la prima lettera precedentemente resa maiuscola
         return def;
     }
 }
