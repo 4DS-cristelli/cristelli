@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class testClasse {
     public static void main(String[] args) {
-        Studente arrS[];
+        Studente[] arrS;
         arrS= new Studente[3];
         Studente s1 = null;
         Studente s2 = null;
@@ -14,7 +14,7 @@ public class testClasse {
         String c;
 
         try{
-            arrS[0] = new Studente("eric", "cRiS teLlI");
+            arrS[0] = new Studente(null, "cRiS teLlI");
             arrS[1] = new Studente("frA nCeS    co    ", "roS si");
             arrS[2] = new Studente("Lu ca", "ro ss   i");
              s1 = new Studente("faBio", "r omboli");
@@ -33,7 +33,12 @@ public class testClasse {
         Studente[] cl2 = cl1.getStudenti();
         System.out.print("toString array studenti returnati: ");
         System.out.println(Arrays.toString(cl2));
-        cl2[0].setCognome("test");
+        try{
+            cl2[0].setCognome("test");
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         System.out.print("toString array cl2 dopo mondifica del cognome: ");
         System.out.println(Arrays.toString(cl2));//test aggregazione stretta (se modifico l'array returnato non si modifica anche cl1)
         System.out.print("toString array cl1 dopo mondifica cl2: ");
