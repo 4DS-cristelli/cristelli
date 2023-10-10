@@ -17,8 +17,6 @@ public class Studente {
         this.cognome = s.cognome;
     }
 
-
-
     public String getNome() {
         return nome;
     }
@@ -99,6 +97,7 @@ public class Studente {
                 }
                 for (j= 1;j<tmp[i].length();j++){
                     if(!(tmp[i].charAt(j)>= 97 &&tmp[i].charAt(j)<= 122)){
+                        //aggiungo controllo con apostrofi e lettere accentate infondo al cognome
                         throw new Exception("iniziali sbagliate");
                     }
                 }
