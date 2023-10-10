@@ -8,17 +8,8 @@ public class Studente {
     private String cognome;
 
     public Studente(String n, String c)throws Exception{
-        try {
-            setNome(n);
-            setCognome(c);
-
-        }catch (ArithmeticException e){
-            throw new ArithmeticException(e.getMessage());
-        } catch(Exception e){
-            throw new Exception(e.getMessage());
-        }
-
-        //controllo stringhe
+        setNome(n);
+        setCognome(c);
     }
 
     public Studente(Studente s){
@@ -37,30 +28,16 @@ public class Studente {
     }
 
     public void setNome(String nome) throws Exception{
-        try{
-            if(controllaStringaManuale(nome)){
-                this.nome = nome.trim();
-            }
-        }catch (ArithmeticException e){
-            throw new ArithmeticException(e.getMessage());
-        }catch (NullPointerException e) {
-            throw new NullPointerException("Nome nullo");
-        }catch (Exception e){
-            throw new Exception(e.getMessage());
+        if(controllaStringaManuale(nome)){
+            this.nome = nome.trim();
         }
+
     }
 
     public void setCognome(String cognome)throws Exception{
-        try{
-            if(controllaStringaManuale(cognome)){
-                this.cognome = cognome;
-            }
-        }catch (NullPointerException e) {
-            throw new NullPointerException("Cognome nullo");
-        }catch (Exception e){
-            throw new Exception(e.getMessage());
+        if(controllaStringaManuale(cognome)){
+            this.cognome = cognome;
         }
-
     }
 
     @Override
@@ -114,9 +91,6 @@ public class Studente {
             int i;
             int j;
             for(i = 0; i<tmp.length;i++){
-                if(tmp[i] == null){
-                    throw new Exception("Array a null");
-                }
                 if(tmp[i].equals("")){
                     throw new Exception("Doppio spazio");
                 }
