@@ -17,12 +17,6 @@ public class Studente {
         } catch(Exception e){
             throw new Exception(e.getMessage());
         }
-        if(controllaStringa(n) && controllaStringa(c)){
-            this.nome = n;
-            this.cognome = c;
-        }else{
-            throw new Exception("Stringa non inizializzata");
-        }
 
         //controllo stringhe
     }
@@ -44,8 +38,8 @@ public class Studente {
 
     public void setNome(String nome) throws Exception{
         try{
-            if(controllaStringa(nome)){
-                this.nome = nome;
+            if(controllaStringaManuale(nome)){
+                this.nome = nome.trim();
             }
         }catch (ArithmeticException e){
             throw new ArithmeticException(e.getMessage());
@@ -58,7 +52,7 @@ public class Studente {
 
     public void setCognome(String cognome)throws Exception{
         try{
-            if(controllaStringa(cognome)){
+            if(controllaStringaManuale(cognome)){
                 this.cognome = cognome;
             }
         }catch (NullPointerException e) {
@@ -97,6 +91,42 @@ public class Studente {
             for(i= 0; i<tmp.length;i++){
                 if(!tmp[i].matches("[A-Z a-z]*")){//
                     throw new Exception("iniziali sbagliate");
+                }
+            }
+        }catch (NullPointerException e){
+            throw new NullPointerException(e.getMessage());
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+        return true;
+    }
+
+    private boolean controllaStringaManuale(String stringa)throws Exception{
+        try {
+            if(stringa.length()<3){
+                throw new Exception("Stringa troppo corta");
+            }
+            //controllo i nomi composti es Maria Beatrice
+            String[] tmp = stringa.split(" ");
+            if(tmp.length==0){
+                throw new Exception("Stringa vuota");
+            }
+            int i;
+            int j;
+            for(i = 0; i<tmp.length;i++){
+                if(tmp[i] == null){
+                    throw new Exception("Array a null");
+                }
+                if(tmp[i].equals("")){
+                    throw new Exception("Doppio spazio");
+                }
+                if(!(tmp[i].charAt(0)>= 65 &&tmp[i].charAt(0)<= 90)){
+                    throw new Exception("iniziali sbagliate");
+                }
+                for (j= 1;j<tmp[i].length();j++){
+                    if(!(tmp[i].charAt(j)>= 97 &&tmp[i].charAt(j)<= 122)){
+                        throw new Exception("iniziali sbagliate");
+                    }
                 }
             }
         }catch (NullPointerException e){
