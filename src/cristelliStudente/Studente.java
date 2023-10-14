@@ -34,7 +34,7 @@ public class Studente {
 
     public void setCognome(String cognome)throws Exception{
         if(controllaStringaManuale(cognome)){
-            this.cognome = cognome;
+            this.cognome = cognome.trim();
         }
     }
 
@@ -95,12 +95,27 @@ public class Studente {
                 if(!(tmp[i].charAt(0)>= 65 &&tmp[i].charAt(0)<= 90)){
                     throw new Exception("iniziali sbagliate");
                 }
-                for (j= 1;j<tmp[i].length();j++){
+                for (j= 1;j<tmp[i].length()-1;j++){//ciclo fino alla penultima lettera
                     if(!(tmp[i].charAt(j)>= 97 &&tmp[i].charAt(j)<= 122)){
                         //aggiungo controllo con apostrofi e lettere accentate infondo al cognome
                         throw new Exception("iniziali sbagliate");
                     }
                 }
+
+                char ultimaLettera= tmp[i].charAt(j);
+
+                if(!(ultimaLettera>= 97 && ultimaLettera<= 122) && !(ultimaLettera == 39) && !(ultimaLettera == 'è') && !(ultimaLettera == 'ì') && !(ultimaLettera == 'à') && !(ultimaLettera == 'ò')&& !(ultimaLettera == 'ù')){//o appartiene all alfabeto o è l'apostrofo (se non è aflabetico o apostrofo o minuscole accentate
+                    //aggiungo controllo con apostrofi e lettere accentate infondo al cognome
+                    throw new Exception("iniziali sbagliate");
+                }
+                /*
+                //controllo ulitma lettera manualmente
+                if(!(tmp[i].charAt(j)>= 97 &&tmp[i].charAt(j)<= 122) || !(tmp[i].charAt(j) == 39) || !(tmp[i].charAt(j) == 133)|| !(tmp[i].charAt(j) == 138)|| !(tmp[i].charAt(j) == 141)|| !(tmp[i].charAt(j) == 149)|| !(tmp[i].charAt(j) == 151)){//o appartiene all alfabeto o è l'apostrofo (se non è aflabetico o apostrofo o minuscole accentate
+                    //aggiungo controllo con apostrofi e lettere accentate infondo al cognome
+                    throw new Exception("iniziali sbagliate");
+                }
+                */
+
             }
         }catch (NullPointerException e){
             throw new NullPointerException(e.getMessage());

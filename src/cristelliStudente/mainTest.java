@@ -1,12 +1,10 @@
 package cristelliStudente;
 
-import jdk.internal.cmm.SystemResourcePressureImpl;
-
 public class mainTest {
     public static void main(String[] args) {
         Studente s1 = null;
         try{
-            s1 = new Studente("Ciccio Eric    ", "Prova");
+            s1 = new Studente("Ciccio Eriè    ", "Prova'   ");
 
         }catch (ArithmeticException e){
             System.out.println("divisione per 0");
@@ -14,6 +12,6 @@ public class mainTest {
             System.out.println(e.getMessage());
         }
 
-        System.out.println("|" + s1.getNome() + "|");
+        System.out.println("|" + s1.getNome() + "|" +s1.getCognome()+"|");
     }
 }
