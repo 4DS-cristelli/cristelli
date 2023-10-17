@@ -1,17 +1,17 @@
 package cristelliCerchio;
-import cristelliSegmento.Punto;
+import cristelliSegmento.PuntoSegmento;
 import java.lang.Math;
 public class Cerchio {
-    private Punto centro;
+    private PuntoSegmento centro;
     private float raggio;
 
-    public Cerchio(Punto c, float r)throws Exception{
+    public Cerchio(PuntoSegmento c, float r)throws Exception{
         if(r<=0){
             throw new Exception("raggio errato");
         }else{
             raggio = r;
         }
-        centro = new Punto(c);
+        centro = new PuntoSegmento(c);
     }
 
     public String toString(){
@@ -19,8 +19,8 @@ public class Cerchio {
         str = str+ "("+ raggio +" , "+ centro.toString()+")";
         return str;
     }
-    public void setCentro(Punto p1){
-        centro= new Punto(p1);
+    public void setCentro(PuntoSegmento p1){
+        centro= new PuntoSegmento(p1);
     }
 
     public void setRaggio(float r)throws Exception{
@@ -31,9 +31,9 @@ public class Cerchio {
         }
     }
 
-    public Punto getCentro(){
+    public PuntoSegmento getCentro(){
 //return c= new Punto(this.centro);
-        return new Punto(centro);
+        return new PuntoSegmento(centro);
     }
 
     public float getRaggio(){

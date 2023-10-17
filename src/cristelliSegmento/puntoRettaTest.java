@@ -14,7 +14,7 @@ public class puntoRettaTest {
         System.out.println("Inserisci la y del punto 1: ");
         y= input.nextByte();
 
-        Punto p1 = new Punto(x, y);
+        PuntoSegmento p1 = new PuntoSegmento(x, y);
 
 
         System.out.println("Inserisci la x del punto 2: ");
@@ -22,7 +22,7 @@ public class puntoRettaTest {
 
         System.out.println("Inserisci la y del punto 2: ");
         y= input.nextByte();
-        Punto p2 = new Punto(x, y);
+        PuntoSegmento p2 = new PuntoSegmento(x, y);
 
 
         try{
@@ -56,7 +56,7 @@ public class puntoRettaTest {
         System.out.println("Inserisci la nuova y del punto 1: ");
         y= input.nextByte();
 
-        s1.setPunto1(new Punto(x,y));
+        s1.setPunto1(new PuntoSegmento(x,y));
 
 
         System.out.println("Inserisci la nuova x del punto 2: ");
@@ -64,7 +64,7 @@ public class puntoRettaTest {
 
         System.out.println("Inserisci la nuova y del punto 2: ");
         y= input.nextByte();
-        s1.setPunto2(new Punto(x,y));
+        s1.setPunto2(new PuntoSegmento(x,y));
 
         System.out.println("Rappresentazione del segmento: "+ s1.toString());
 

@@ -1,5 +1,5 @@
 package cristelliCerchio;
-import cristelliSegmento.Punto;
+import cristelliSegmento.PuntoSegmento;
 
 import java.util.Scanner;
 public class cerchioTest {
@@ -20,7 +20,7 @@ public class cerchioTest {
         System.out.println("Inserisci il raggio: ");
         r= input.nextByte();
 
-        Punto p1 = new Punto(x, y);
+        PuntoSegmento p1 = new PuntoSegmento(x, y);
 
 
         try{
@@ -46,7 +46,7 @@ public class cerchioTest {
         x= input.nextByte();
         System.out.println("Inserisci la nuova y del centro 1: ");
         y= input.nextByte();
-        c1.setCentro(new Punto(x,y));
+        c1.setCentro(new PuntoSegmento(x,y));
 
         System.out.println("Inserisci il nuovo raggio: ");
         r= input.nextByte();

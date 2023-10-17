@@ -1,5 +1,5 @@
 
-package cristelliSegmento;
+package cristelliPunto;
 public class Punto {
     float x;
     float y;
@@ -44,7 +44,8 @@ public class Punto {
         y = y+traslaY;
     }
 
-
-
-
+    public void shift(float x, float y){
+        traslaX(x);
+        traslaY(y);
+    }
 }
