@@ -7,8 +7,8 @@ public class Quadrato extends PoligonoRegolare{
         super(lato, 4);
     }
 
-    public float Area(){
-        float Area = getLato()*getLato();
+    public double Area(){
+        double Area = getLato()*getLato();
         return Area;
     }
     public double Diagonale(){

@@ -26,8 +26,8 @@ public class Rombo extends PoligonoRegolare{
         return dMinore;
     }
 
-    public float Area(){
-        float area = (dMaggiore*dMinore)/2;
+    public double Area(){
+        double area = (dMaggiore*dMinore)/2;
         return area;
     }
 

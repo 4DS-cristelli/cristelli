@@ -4,7 +4,6 @@ public class PoligonoRegolare {
     private int nLati;
 
     public PoligonoRegolare(float l, int n)throws Exception{
-
         setLato(l);
         setnLati(n);
     }
