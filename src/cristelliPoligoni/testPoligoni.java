@@ -17,9 +17,15 @@ public class testPoligoni {
         //quadrato
         try {
             p1 = new PoligonoRegolare(10, 4);
+
+            Quadrato p5 = new Quadrato(48f);
+
+
+
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
+
 
         //rombo
         try {
@@ -49,6 +55,11 @@ public class testPoligoni {
             gp1.addPoligono(p3);
         }catch (Exception e){
             System.out.println(e.getMessage());
+        }
+        try{
+            System.out.println(gp1.Area(0));
+
+        }catch (Exception e){
         }
 
         try{
