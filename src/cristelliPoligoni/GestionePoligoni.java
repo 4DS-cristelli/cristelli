@@ -16,6 +16,9 @@ public class GestionePoligoni {
     }
 
     public void addPoligono(PoligonoRegolare p1)throws Exception{
+        if(p1 == null){
+            throw new Exception("Poligono nullo");
+        }
         if(dimLogica>= IP.length){
             throw new Exception("dim esaurita");
         }
@@ -27,7 +30,7 @@ public class GestionePoligoni {
         double area= 0;
         if(i>=0 && i<= IP.length){
             if(IP[i]!= null){
-                //area = IP[i].Area; //come faccio?
+               // area = IP[i].
             }else{
                 throw new Exception("Pos i == null");
             }

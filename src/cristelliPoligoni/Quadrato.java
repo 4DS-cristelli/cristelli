@@ -7,11 +7,11 @@ public class Quadrato extends PoligonoRegolare{
         super(lato, 4);
     }
 
-    public double Area(){
-        double Area = getLato()*getLato();
-        return Area;
+    public double area(){
+        double area = getLato()*getLato();
+        return area;
     }
-    public double Diagonale(){
+    public double diagonale(){
         double diagonale = Math.sqrt(((Math.pow(getLato(),2))*2));
         return diagonale;
     }

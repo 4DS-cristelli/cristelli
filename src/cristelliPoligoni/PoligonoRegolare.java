@@ -2,10 +2,12 @@ package cristelliPoligoni;
 public class PoligonoRegolare {
     private float lato;
     private int nLati;
+    private static int nIstanze;
 
     public PoligonoRegolare(float l, int n)throws Exception{
         setLato(l);
         setnLati(n);
+        nIstanze++;
     }
 
     public void setLato(float l) throws Exception {
@@ -15,8 +17,8 @@ public class PoligonoRegolare {
         this.lato = l;
     }
     public void setnLati(int n) throws Exception {
-        if(n<=2){
-            throw new Exception("n <= 2");
+        if(n<=2 || n>6){
+            throw new Exception("n <= 2 o n>6");
         }
         this.nLati =n;
     }
@@ -27,6 +29,10 @@ public class PoligonoRegolare {
         return nLati;
     }
 
+    public static int getnIstanze() {
+        return nIstanze;
+    }
+
     public float Perimetro(){
         float p = lato*nLati;
         return p;
@@ -35,6 +41,7 @@ public class PoligonoRegolare {
     public String toString(){
         String stringa = "";
         stringa = stringa + "Nlati: "+ nLati+" Lato: "+lato;
+        stringa = stringa + " nIstanze: "+nIstanze;
         return stringa;
     }
 }
