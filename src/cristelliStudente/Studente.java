@@ -26,14 +26,14 @@ public class Studente {
     }
 
     public void setNome(String nome) throws Exception{
-        if(controllaStringaManuale(nome)){
+        if(controllaStringa(nome)){
             this.nome = nome.trim();
         }
 
     }
 
     public void setCognome(String cognome)throws Exception{
-        if(controllaStringaManuale(cognome)){
+        if(controllaStringa(cognome)){
             this.cognome = cognome.trim();
         }
     }
@@ -64,7 +64,7 @@ public class Studente {
             }
             int i;
             for(i= 0; i<tmp.length;i++){
-                if(!tmp[i].matches("[A-Z a-z]*")){//
+                if(!tmp[i].matches("[A-Z][a-z]*[a-zàòèùì']")){//
                     throw new Exception("iniziali sbagliate");
                 }
             }

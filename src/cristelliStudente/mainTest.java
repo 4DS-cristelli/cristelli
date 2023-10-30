@@ -4,7 +4,7 @@ public class mainTest {
     public static void main(String[] args) {
         Studente s1 = null;
         try{
-            s1 = new Studente("Ciccio Eriè    ", "Prova'   ");
+            s1 = new Studente("Eric' ", "Provà");
 
         }catch (ArithmeticException e){
             System.out.println("divisione per 0");
