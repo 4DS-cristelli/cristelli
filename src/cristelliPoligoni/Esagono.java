@@ -5,12 +5,17 @@ public class Esagono extends PoligonoRegolare{
         super(lato, 6);
     }
 
-    public double Area(){
-        double Area = Perimetro()*Apotema()/2;
+    public double area(){
+        double Area = Perimetro()*apotema()/2;
         return Area;
     }
-    public double Apotema(){
+    public double apotema(){
         double apotema = getLato()*0.866;
         return apotema;
+    }
+    public String toString(){
+        String stringa = "Esagono ";
+        stringa+= " Lato: "+getLato();
+        return stringa;
     }
 }

@@ -2,11 +2,42 @@ package cristelliPoligoni;
 
 public class testPoligoni {
     public static void main(String[] args) {
-        GestionePoligoni gp1 = null;
+        PoligonoRegolare pl1;
+        PoligonoRegolare pl2;
+        PoligonoRegolare pl3;
+        PoligonoRegolare pl4;
+
+        Quadrato q1 = null;
         Rombo r1 = null;
-        PoligonoRegolare p1 = null;
-        PoligonoRegolare p2 = null;
-        PoligonoRegolare p3 = null;
+        Esagono e1 = null;
+        Pentagono p1= null;
+        try{
+            q1 = new Quadrato(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            r1 = new Rombo(10,10,10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            e1 = new Esagono(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }try{
+            p1 = new Pentagono(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        pl1 = q1;
+        pl2 = r1;
+        pl3 = e1;
+        pl4 = p1;
+
+        System.out.println(q1.disegna());
+        System.out.println(r1.disegna());
+        GestionePoligoni gp1 = null;
 
         try {
             gp1 = new GestionePoligoni(4);
@@ -14,45 +45,11 @@ public class testPoligoni {
             System.out.println(e.getMessage());
         }
 
-        //quadrato
         try {
-            p1 = new PoligonoRegolare(10, 4);
-
-            Quadrato p5 = new Quadrato(48f);
-
-
-
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-
-        //rombo
-        try {
-            r1 = new Rombo(10,10,10 );
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        //pentagono
-        try {
-            p2 = new PoligonoRegolare(10, 5);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        //esagono
-        try {
-            p3 = new PoligonoRegolare(10, 6);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            gp1.addPoligono(p1);
-            gp1.addPoligono(r1);
-            gp1.addPoligono(p2);
-            gp1.addPoligono(p3);
+            gp1.addPoligono(pl1);
+            gp1.addPoligono(pl2);
+            gp1.addPoligono(pl3);
+            gp1.addPoligono(pl4);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -75,10 +72,10 @@ public class testPoligoni {
 
         //test aggregazione lasca
         try{
-            p1.setLato(20);
-            p2.setLato(20);
-            p3.setLato(20);
-            r1.setLato(20);
+            pl1.setLato(20);
+            pl2.setLato(20);
+            pl3.setLato(20);
+            pl4.setLato(20);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -100,5 +97,58 @@ public class testPoligoni {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
+
+
+
+
+
+        /*
+        PoligonoRegolare pl1;
+        PoligonoRegolare pl2;
+        PoligonoRegolare pl3;
+        PoligonoRegolare pl4;
+
+        Quadrato q1 = null;
+        Rombo r1 = null;
+        Esagono e1 = null;
+        Pentagono p1= null;
+        try{
+            q1 = new Quadrato(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            r1 = new Rombo(10,10,10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            e1 = new Esagono(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }try{
+            p1 = new Pentagono(10);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        pl1 = q1;
+        pl2 = r1;
+        pl3 = e1;
+        pl4 = p1;
+
+
+        System.out.println(pl1.toString() + " Area "+pl1.area()+ " Perimetro "+ pl1.Perimetro());
+        System.out.println(pl2.toString()+ " Area "+pl2.area()+ " Perimetro "+ pl2.Perimetro());
+        System.out.println(pl3.toString()+ " Area "+pl3.area()+ " Perimetro "+ pl3.Perimetro());
+        System.out.println(pl4.toString()+ " Area "+pl4.area()+ " Perimetro "+ pl4.Perimetro());
+
+*/
+
+
+
+
+
+
+
     }
 }

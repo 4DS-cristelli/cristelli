@@ -30,7 +30,7 @@ public class GestionePoligoni {
         double area= 0;
         if(i>=0 && i<= IP.length){
             if(IP[i]!= null){
-               // area = IP[i].
+               area = IP[i].area();
             }else{
                 throw new Exception("Pos i == null");
             }

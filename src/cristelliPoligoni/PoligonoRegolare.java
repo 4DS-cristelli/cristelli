@@ -1,5 +1,5 @@
 package cristelliPoligoni;
-public class PoligonoRegolare {
+abstract class PoligonoRegolare {
     private float lato;
     private int nLati;
     private static int nIstanze;
@@ -37,6 +37,7 @@ public class PoligonoRegolare {
         float p = lato*nLati;
         return p;
     }
+    abstract double area();
 
     public String toString(){
         String stringa = "";
