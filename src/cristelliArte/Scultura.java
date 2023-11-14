@@ -26,6 +26,7 @@ public class Scultura extends Operadarte{
 
     }
 
+
     public float getLarghezza() {
         return larghezza;
     }
