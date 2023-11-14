@@ -85,8 +85,4 @@ public class Collezione {
         }
         return stringa;
     }
-
-
-
-
 }
