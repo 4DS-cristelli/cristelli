@@ -1,15 +1,20 @@
 package cristelliArte;
 
 public class Scultura extends Operadarte{
-    private float altezza;
-    private float larghezza;
-    private float profondita;
+    protected float altezza;
+    protected float larghezza;
+    protected float profondita;
 
-    public Scultura(String titolo, String artista, float altezza, float larghezza, float profondita)throws Exception{
+    protected Supporto s1;
+
+
+    public Scultura(String titolo, String artista, float altezza, float larghezza, float profondita, Supporto s1)throws Exception{
         super(titolo, artista);
         setAltezza(altezza);
         setProfondita(profondita);
         setLarghezza(larghezza);
+        this.s1 = new Supporto(s1);
+
 
     }
 
@@ -17,7 +22,7 @@ public class Scultura extends Operadarte{
         return altezza;
     }
 
-    public void setAltezza(float altezza)throws Exception{
+    private void setAltezza(float altezza)throws Exception{
         if(altezza>0){
             this.altezza = altezza;
         }else{
@@ -31,7 +36,7 @@ public class Scultura extends Operadarte{
         return larghezza;
     }
 
-    public void setLarghezza(float larghezza)throws Exception{
+    private void setLarghezza(float larghezza)throws Exception{
         if(larghezza>0){
             this.larghezza = larghezza;
         }else{
@@ -43,7 +48,7 @@ public class Scultura extends Operadarte{
         return profondita;
     }
 
-    public void setProfondita(float profondita)throws Exception{
+    private void setProfondita(float profondita)throws Exception{
         if(profondita>0){
             this.profondita = profondita;
         }else{
@@ -53,11 +58,12 @@ public class Scultura extends Operadarte{
 
     double printingombro() {
         double ingombro = altezza*larghezza*profondita;
+        ingombro = ingombro + s1.printingombro();
         return ingombro;
     }
     public String toString(){
         String stringa= "";
-        stringa = "Scultura"+ " Artista: "+getArtista()+" Titolo: "+getTitolo()+" altezza: "+altezza+"  larghezza: "+larghezza+" profondità "+profondita;
+        stringa = "Scultura"+ " Artista: "+getArtista()+" Titolo: "+getTitolo()+" altezza: "+altezza+"  larghezza: "+larghezza+" profondità "+profondita + " "+ s1.toString();
         return stringa;
     }
 }
