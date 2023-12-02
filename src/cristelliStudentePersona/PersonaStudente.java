@@ -1,6 +1,6 @@
 package cristelliStudentePersona;
 
-import org.apache.commons.validator.routines.EmailValidator;
+//import org.apache.commons.validator.routines.EmailValidator;
 
 import java.time.LocalDate;
 
@@ -49,12 +49,16 @@ public class PersonaStudente {
     }
 
     public void setEmail(String email)throws Exception{
+        this.email = email;
+        /*
         EmailValidator emailValidator = EmailValidator.getInstance();
         if(emailValidator.isValid(email)){
             this.email = email;
         }else{
             throw new Exception("email non valida");
         }
+
+         */
 
     }
 
