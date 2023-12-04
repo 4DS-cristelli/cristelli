@@ -6,12 +6,8 @@ public abstract class FiguraPiana extends FiguraGeometrica{
         super(colore);
     }
 
-    public double calcolaPerimetro(){
-        return 0;
-    }
+    public abstract double calcolaPerimetro();
 
-    public double calcolaArea(){
-        return 0;
-    }
+    public abstract double calcolaArea();
 
 }

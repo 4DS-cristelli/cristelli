@@ -39,4 +39,14 @@ public class Cubo extends FiguraSolida{
                 "lato=" + lato +
                 '}';
     }
+
+    @Override
+    public double calcolaPerimetro() {
+        return 0;
+    }
+
+    @Override
+    public double calcolaArea() {
+        return 0;
+    }
 }

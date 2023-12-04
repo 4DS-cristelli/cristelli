@@ -38,4 +38,14 @@ public class Sfera extends FiguraSolida{
                 "raggio=" + raggio +
                 '}';
     }
+
+    @Override
+    public double calcolaPerimetro() {
+        return 0;
+    }
+
+    @Override
+    public double calcolaArea() {
+        return 0;
+    }
 }

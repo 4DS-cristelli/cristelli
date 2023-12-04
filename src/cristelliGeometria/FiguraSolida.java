@@ -5,13 +5,10 @@ public abstract class FiguraSolida extends FiguraPiana{ //problema: figura solia
         super(colore);
     }
 
-    public double calcolaVolume(){
-        return 0;
-    }
+    public abstract double calcolaVolume();
 
-    public double calcolaSuperficie(){
-        return 0;
-    }
+
+    public abstract double calcolaSuperficie();
 
     @Override
     public String toString() {
