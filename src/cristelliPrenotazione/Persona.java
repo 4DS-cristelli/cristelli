@@ -1,6 +1,6 @@
 package cristelliPrenotazione;
 
-import org.apache.commons.validator.routines.EmailValidator;
+//import org.apache.commons.validator.routines.EmailValidator;
 
 import java.time.LocalDate;
 
@@ -49,12 +49,15 @@ public class Persona {
     }
 
     public void setEmail(String email)throws Exception{
-        EmailValidator emailValidator = EmailValidator.getInstance();
+        /*
+//        EmailValidator emailValidator = EmailValidator.getInstance();
         if(emailValidator.isValid(email)){
             this.email = email;
         }else{
             throw new Exception("email non valida");
         }
+        */
+         
 
     }
 
