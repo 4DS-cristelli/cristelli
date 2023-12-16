@@ -13,22 +13,25 @@ public class StudenteEreditato extends PersonaStudente{
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
+        numeroIstanze++;
         return super.clone();
     }
 
     public boolean equals(Object obj){
-        StudenteEreditato s1 = (StudenteEreditato) obj;
         boolean uguale= false;
-
-        if(s1.getNome().equals(getNome())){
-            if(s1.getCognome().equals(getCognome())){
-                if(s1.getCodFisc().equals(getCodFisc())){
-                    if(s1.getDataDiNascita().equals(getDataDiNascita())){
-                        uguale = true;
+        if(obj instanceof PersonaStudente){
+            StudenteEreditato s1 = (StudenteEreditato) obj;
+            if(s1.getNome().equals(getNome())){
+                if(s1.getCognome().equals(getCognome())){
+                    if(s1.getCodFisc().equals(getCodFisc())){
+                        if(s1.getDataDiNascita().equals(getDataDiNascita())){
+                            uguale = true;
+                        }
                     }
                 }
             }
         }
+
         return uguale;
     }
 

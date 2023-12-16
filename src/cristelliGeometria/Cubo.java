@@ -1,6 +1,6 @@
 package cristelliGeometria;
 import java.lang.Math;
-public class Cubo extends FiguraSolida{
+public class Cubo extends FiguraSolida1 {
     private float lato;
 
     public Cubo(String colore, float lato) throws Exception {

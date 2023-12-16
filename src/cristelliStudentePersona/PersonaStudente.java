@@ -11,7 +11,7 @@ public class PersonaStudente {
     private String dataDiNascita;
 
     private String email;
-    private static int numeroIstanze = 0;
+    protected static int numeroIstanze = 0;
 
     public PersonaStudente(){
         numeroIstanze++;

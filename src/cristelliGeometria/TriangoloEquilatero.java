@@ -1,6 +1,6 @@
 package cristelliGeometria;
 import java.lang.Math;
-public class TriangoloEquilatero extends FiguraPiana implements PoligonoRegolare{
+public class TriangoloEquilatero extends FiguraGeometrica implements PoligonoRegolare{
     private float lato;
     public TriangoloEquilatero(String colore, float lato) throws Exception {
         super(colore);

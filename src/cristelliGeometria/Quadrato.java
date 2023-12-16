@@ -1,7 +1,7 @@
 package cristelliGeometria;
 import java.lang.Math;
 
-public class Quadrato extends FiguraPiana implements PoligonoRegolare{
+public class Quadrato extends FiguraGeometrica implements PoligonoRegolare{
     private float lato;
 
     public Quadrato(String colore, float lato) throws Exception {

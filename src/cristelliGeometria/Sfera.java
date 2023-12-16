@@ -1,6 +1,6 @@
 package cristelliGeometria;
 import java.lang.Math;
-public class Sfera extends FiguraSolida{
+public class Sfera extends FiguraSolida1 {
     private float raggio;
 
     public Sfera(String colore, float raggio) throws Exception {

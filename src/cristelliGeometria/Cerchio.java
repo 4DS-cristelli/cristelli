@@ -1,6 +1,6 @@
 package cristelliGeometria;
 import java.lang.Math;
-public class Cerchio extends FiguraPiana implements PoligonoRegolare{
+public class Cerchio extends FiguraGeometrica implements PoligonoRegolare{
     private float raggio;
     public Cerchio(String colore, float raggio) throws Exception {
         super(colore);
