@@ -250,6 +250,15 @@ public class Persona {
         stringa= "[" + cognome + ", " + nome + ", " + codFisc + ", "+dataDiNascita+"]";
         return stringa;
     }
+
+    //returno true se p1 età > etè
+    public boolean compareTo(Persona p1){
+        if(p1.calcolaEta()>calcolaEta()){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
 
 
