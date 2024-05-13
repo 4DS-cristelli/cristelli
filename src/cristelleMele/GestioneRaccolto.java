@@ -1,6 +1,6 @@
 package cristelleMele;
 import cristelliData.*;
-import sun.rmi.runtime.NewThreadAction;
+
 
 public class GestioneRaccolto {
     private int numGiornate;
